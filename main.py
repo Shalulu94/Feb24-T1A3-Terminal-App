@@ -1,6 +1,7 @@
 import random
 import time
 import os
+from character import Character
 
 def print_pause(message):
     print(message)
