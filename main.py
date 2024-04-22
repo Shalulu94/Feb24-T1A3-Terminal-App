@@ -2,6 +2,8 @@ import random
 import time
 import os
 from classes import Character
+from functions import character_create
+from functions import character_details
 
 def print_pause(message):
     print(message)
@@ -19,11 +21,11 @@ print_pause("Defeat all 3 opponents and be crowned the champion!\n")
 def main_menu():
      
     user_input = 0
-    print("Please input a selection out of the below options to continue:\n")
+    
 
     while user_input != 4:
         try:
-            
+            print("Please input a selection out of the below options to continue:\n")
             print("1. Create a new fighter")
             print("2. Enter the Tournament")
             print("3. View fighter details")
@@ -33,11 +35,11 @@ def main_menu():
             
             
             if user_input == 1:
-                print("Take user to character creation screen")
+                character_create()
             elif user_input == 2:
-                print("Take user to pre-battle menu")
+                print("Take user to battle menu")
             elif user_input == 3:
-                print("Take user to view fighter details")
+                character_details()
             elif user_input == 4:
                 print("Thank you for playing!")
                 break
