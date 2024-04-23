@@ -14,11 +14,11 @@ def character_create():
 
     print("\nYour fighting style dictates your fighter's strength in the ring.")
     print("There are three fighting styles to choose from:")
-    print("\nAggressive - Your fighter will deal more damage with their attacks ")
-    print("Defensive - Your fighter will take less damage on successful blocks")
-    print("Tanky - Your fighter has a higher health pool\n")
+    print("\n1. Aggressive - Your fighter will deal more damage with their attacks ")
+    print("2. Defensive - Your fighter will take less damage on successful blocks")
+    print("3. Tanky - Your fighter has a higher health pool\n")
 
-    player_fight_style = input("Please choose your fighting style from the above options: ")
+    player_fight_style = int(input("Please enter in the number corresponding to the fighting style you want to adopt: "))
 
     global player 
     player = Character(player_firstname, player_lastname, player_alias, player_fight_style)
