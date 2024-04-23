@@ -1,5 +1,6 @@
 # Character creation
 from classes import Character
+from classes import Opponent
 import os
 
 def character_create():
@@ -26,7 +27,7 @@ def character_create():
         player = Character(player_firstname, player_lastname, player_alias, player_fight_style)
 
             
-        print(f"\nYour fighter's name is: {player.first_name} \"{player.alias}\" {player.last_name}")
+        print(f"\nYour fighter's name is: {player.full_name}")
         print(f"\nYour fighting style is: {player.fight_style}")
         print(f"Your attack is: {player.attack}")
         print(f"Your defence is: {player.defence}")
@@ -62,6 +63,57 @@ def character_details():
 
         os.system('clear')
 
+def opponent():
+
+    print("Hello")
+
+    global sandy
+    sandy = Opponent("Sandy", "Huynh", "Luxury", 80, 40, 500)
+
+    global pimmsy
+    pimmsy = Opponent("Pimmsy", "Huynh", "Big Dog", 125, 50, 1500)
+
+    global sally
+    sally = Opponent("Sally", "Huynh", "The Baker", 100, 50, 800)
+
+    global jager
+    jager = Opponent("Jager", "Huynh", "Sleepy", 100, 80, 800)
+
+    os.system('clear')
+
+    try:
+        while player.battle_won < 4:
+            if player.battle_won == 0:
+
+                print(f"Your next opponent will be {sandy.opp_full_name}!")
+                print(f"\n{sandy.opp_full_name}'s stats are as below:")
+                print(f"\nAttack: {sandy.opp_attack}")
+                print(f"Defence: {sandy.opp_defence}")
+                print(f"Hp: {sandy.opp_hp}")   
+
+            elif player.battle_won == 1:
+                print(f"Your next opponent will be {sally.opp_full_name}!")
+                print(f"\n{sally.opp_full_name}'s stats are as below:")
+                print(f"\nAttack: {sally.opp_attack}")
+                print(f"Defence: {sally.opp_defence}")
+                print(f"Hp: {sally.opp_hp}")   
+            
+            else:
+                print(f"Your next opponent will be {pimmsy.opp_full_name}!")
+                print(f"\n{pimmsy.opp_full_name}'s stats are as below:")
+                print(f"\nAttack: {pimmsy.opp_attack}")
+                print(f"Defence: {pimmsy.opp_defence}")
+                print(f"Hp: {pimmsy.opp_hp}")   
+            
+            input("\nPress enter to return to Battle menu")
+
+            os.system('clear')
+
+            break
+
+    except: print("Something went wrong")
+
+
 def battle_menu():
     os.system('clear')
 
@@ -85,7 +137,7 @@ def battle_menu():
             user_input = int(input("Please input a number out of the below options to continue: "))
 
             if user_input == 1:
-                print("view upcoming opponent screen")
+                opponent()
             elif user_input == 2:
                 character_details()
             elif user_input == 3:
@@ -108,8 +160,5 @@ def battle_menu():
         os.system('clear')
     
 
-
-
-# def opponent():
 
     

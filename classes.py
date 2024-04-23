@@ -44,4 +44,10 @@ class Character():
     
 class Opponent():
     def __init__(self, first_name, last_name, alias, attack, defence, hp):
-        self.first_name = first_name
+        self.opp_first_name = first_name
+        self.opp_last_name = last_name
+        self.opp_alias = alias
+        self.opp_attack = int(attack)
+        self.opp_defence = int(defence)
+        self.opp_hp = int(hp)
+        self.opp_full_name = f"{first_name} \"{alias}\" {last_name}"
