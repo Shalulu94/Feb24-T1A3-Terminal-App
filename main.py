@@ -30,7 +30,7 @@ def main_menu():
 
     while user_input != 4:
         try:
-            print("Please input a selection out of the below options to continue:\n")
+            print("Please input a number out of the below options to continue:\n")
             print("1. Create a new fighter")
             print("2. Enter the Tournament")
             print("3. View fighter details")
@@ -49,10 +49,10 @@ def main_menu():
                 print("Thank you for playing!")
                 break
             else:
-                print("That is an invalid selection. Please enter a number between 1 and 3")
+                print("That is an invalid selection. Please enter a number between 1 and 4")
 
         except ValueError:
-            print("That's an invalid selection. Please enter a number between 1 and 3")
+            print("That's an invalid selection. Please enter a number between 1 and 4")
     
 
 main_menu()

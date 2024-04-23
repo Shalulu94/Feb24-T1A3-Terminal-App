@@ -3,36 +3,45 @@ from classes import Character
 import os
 
 def character_create():
-    os.system('clear')
-    print("Welcome to the fighter creation menu\n")
-    print("Here you will be able to create a new fighter to compete with in the boxing championship!\n")
+    
+    try:
+        os.system('clear')
+        print("Welcome to the fighter creation menu\n")
+        print("Here you will be able to create a new fighter to compete with in the boxing championship!\n")
 
 
-    player_firstname = input("Please enter your fighter's first name: ")
-    player_lastname = input("Please enter your fighter's last name: ")
-    player_alias = input("Please enter your fighter's nickname: ")
+        player_firstname = input("Please enter your fighter's first name: ")
+        player_lastname = input("Please enter your fighter's last name: ")
+        player_alias = input("Please enter your fighter's nickname: ")
 
-    print("\nYour fighting style dictates your fighter's strength in the ring.")
-    print("There are three fighting styles to choose from:")
-    print("\n1. Aggressive - Your fighter will deal more damage with their attacks ")
-    print("2. Defensive - Your fighter will take less damage on successful blocks")
-    print("3. Tanky - Your fighter has a higher health pool\n")
+        print("\nYour fighting style dictates your fighter's strength in the ring.")
+        print("There are three fighting styles to choose from:")
+        print("\n1. Aggressive - Your fighter will deal more damage with their attacks ")
+        print("2. Defensive - Your fighter will take less damage on successful blocks")
+        print("3. Tanky - Your fighter has a higher health pool\n")
 
-    player_fight_style = int(input("Please enter in the number corresponding to the fighting style you want to adopt: "))
+        player_fight_style = int(input("Please enter in the number corresponding to the fighting style you want to adopt: "))
 
-    global player 
-    player = Character(player_firstname, player_lastname, player_alias, player_fight_style)
+        global player 
+        player = Character(player_firstname, player_lastname, player_alias, player_fight_style)
 
-        
-    print(f"\nYour fighter's name is: {player.first_name} \"{player.alias}\" {player.last_name}")
-    print(f"\nYour fighting style is: {player.fight_style}")
-    print(f"Your attack is: {player.attack}")
-    print(f"Your defence is: {player.defence}")
-    print(f"Your total HP is: {player.hp}")
+            
+        print(f"\nYour fighter's name is: {player.first_name} \"{player.alias}\" {player.last_name}")
+        print(f"\nYour fighting style is: {player.fight_style}")
+        print(f"Your attack is: {player.attack}")
+        print(f"Your defence is: {player.defence}")
+        print(f"Your total HP is: {player.hp}")
 
-    input("\nPress Enter to return back to the main menu")
+        input("\nPress Enter to return back to the main menu")
 
-    os.system('clear')
+        os.system('clear')
+
+    except ValueError:
+        print("\nThat's an invalid selection. You are required to input a number between 1 and 3 to select your fighting style.")
+
+        input("\nCharacter creation will need to restart. Press enter to continue")
+
+        character_create()
 
 # global player = Character(player_firstname, player_lastname, player_alias, player_fight_style)
 
@@ -55,18 +64,23 @@ def character_details():
 
 def battle_menu():
     os.system('clear')
+
+    user_input = 0
+
     try:
 
-        print(f"Welcome to the locker room! {player.first_name}")
-        print("Here you will be able to prepare for your upcoming match")
-        print("Within the locker room you can:")
-        print("1. View your upcoming opponent")
-        print("2. View your fighter stats")
-        print("3. Upgrade figher stats")
-        print("4. Go to Battle!")
-        print("5. Back to main menu")
-        
-        while user_input != 4:
+                
+        while user_input != 5:
+
+            print(f"Welcome to the locker room {player.first_name}!")
+            print("\nHere you will be able to prepare for your upcoming match")
+            print("\nWithin the locker room you can:")
+            print("\n1. View your upcoming opponent")
+            print("2. View your fighter stats")
+            print("3. Upgrade figher stats")
+            print("4. Go to Battle!")
+            print("5. Back to main menu")
+
 
             user_input = int(input("Please input a number out of the below options to continue: "))
 
@@ -92,19 +106,10 @@ def battle_menu():
         input("\nPress Enter to return back to the battle menu")
 
         os.system('clear')
-
-    
-
     
 
 
 
+# def opponent():
+
     
-
-
-
-
-
-
-
-

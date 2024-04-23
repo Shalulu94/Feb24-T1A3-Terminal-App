@@ -5,6 +5,7 @@ class Character():
         self.first_name = first_name
         self.last_name = last_name
         self.alias = alias
+        self.full_name = f"{first_name} \"{self.alias}\" {self.last_name}"
         self.fight_style = fight_style
        
         while fight_style != range(1,4):
@@ -37,17 +38,10 @@ class Character():
         self.defence = defence
         self.hp = hp
         self.statpoints = 0
+        self.battle_won = 0
+        
         
     
-
-
-
-# print(f"\nFighter name is: {player.name}")
-# print(player.alias)
-# print(player.fight_style)
-# print(player.attack)
-# print(player.defence)
-# print(player.hp)
-# print(player.statpoints)
-
-
+class Opponent():
+    def __init__(self, first_name, last_name, alias, attack, defence, hp):
+        self.first_name = first_name
