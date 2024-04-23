@@ -34,7 +34,7 @@ def main_menu():
             print("1. Create a new fighter")
             print("2. Enter the Tournament")
             print("3. View fighter details")
-            print("4. Exit Game")
+            print("4. Exit Game")            
 
             user_input = int(input())
             
