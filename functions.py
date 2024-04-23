@@ -37,14 +37,21 @@ def character_create():
 # global player = Character(player_firstname, player_lastname, player_alias, player_fight_style)
 
 def character_details():
-    print(f"\nYour fighter's name is: {player.first_name} \"{player.alias}\" {player.last_name}")
-    print(f"\nYour fighting style is: {player.fight_style}")
-    print(f"Your attack is: {player.attack}")
-    print(f"Your defence is: {player.defence}")
-    print(f"Your total HP is: {player.hp}\n")
+    try:
+        os.system('clear')
+        print(f"\nYour fighter's name is: {player.first_name} \"{player.alias}\" {player.last_name}")
+        print(f"\nYour fighting style is: {player.fight_style}")
+        print(f"Your attack is: {player.attack}")
+        print(f"Your defence is: {player.defence}")
+        print(f"Your total HP is: {player.hp}\n")
 
-    input("\nPress Enter to return back to the main menu")
-    os.system('clear')
+        input("\nPress Enter to return back to the main menu")
+        os.system('clear')
+    except NameError:
+        print("You have not created a fighter yet! Please create a new fighter from the main menu")
+        input("\nPress Enter to return back to the main menu")
+
+        os.system('clear')
 
 
     

@@ -4,9 +4,23 @@ class Character():
         self.last_name = last_name
         self.alias = alias
         self.fight_style = fight_style
-        self.attack = 100
-        self.defence = 50
-        self.hp = 600
+        if fight_style == "aggressive" or fight_style == "Aggressive": 
+            attack = 125
+        else:
+            attack = 100
+
+        if fight_style == "defensive" or fight_style == "Defensive":
+            defence = 75
+        else:
+            defence = 50
+        
+        if fight_style == "tanky" or fight_style == "Tanky":
+            hp = 750
+        else:
+            hp = 600
+        self.attack = attack
+        self.defence = defence
+        self.hp = hp
         self.statpoints = 3
         
     
