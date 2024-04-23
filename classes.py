@@ -1,3 +1,5 @@
+import os
+
 class Character():
     def __init__(self, first_name, last_name, alias, fight_style):
         self.first_name = first_name
@@ -22,6 +24,7 @@ class Character():
                 hp = 750
                 break
             else: 
+                os.system('clear')
                 print("That fight style is not valid.")
                 print("There are three fighting styles to choose from:")
                 print("\n1. Aggressive - Your fighter will deal more damage with their attacks ")
@@ -33,7 +36,7 @@ class Character():
         self.attack = attack
         self.defence = defence
         self.hp = hp
-        self.statpoints = 3
+        self.statpoints = 0
         
     
 

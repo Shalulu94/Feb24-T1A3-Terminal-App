@@ -1,13 +1,18 @@
+# Sys imports
 import random
 import time
 import os
+
+# Local imports
 from classes import Character
 from functions import character_create
 from functions import character_details
+from functions import battle_menu
 
+# Delay print text
 def print_pause(message):
     print(message)
-    time.sleep(1)
+    time.sleep(0.5)
 
 # Welcome introductory text
 print_pause("Welcome to Fight Night!")
@@ -37,7 +42,7 @@ def main_menu():
             if user_input == 1:
                 character_create()
             elif user_input == 2:
-                print("Take user to battle menu")
+                battle_menu()
             elif user_input == 3:
                 character_details()
             elif user_input == 4:
@@ -47,7 +52,7 @@ def main_menu():
                 print("That is an invalid selection. Please enter a number between 1 and 3")
 
         except ValueError:
-            print("That's not a number. Please enter a number between 1 and 3")
+            print("That's an invalid selection. Please enter a number between 1 and 3")
     
 
 main_menu()
