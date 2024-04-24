@@ -3,7 +3,7 @@ import character_creation
 import os
 
 
-sandy = Opponent("Sandy", "Huynh", "Luxury", 80, 40, 500)
+sandy = Opponent("Sandy", "Huynh", "Chanel", 80, 40, 500)
 pimmsy = Opponent("Pimmsy", "Huynh", "Big Dog", 125, 50, 1500)
 sally = Opponent("Sally", "Huynh", "The Baker", 100, 50, 800)
 jager = Opponent("Jager", "Huynh", "Sleepy", 100, 80, 800)
@@ -25,7 +25,7 @@ def opponent():
                 print(f"Defence: {sandy.opp_defence}")
                 print(f"Hp: {sandy.opp_hp}")   
 
-            elif player.battle_won == 1:
+            elif character_creation.player.battle_won == 1:
                 print(f"Your next opponent will be {sally.opp_full_name}!")
                 print(f"\n{sally.opp_full_name}'s stats are as below:")
                 print(f"\nAttack: {sally.opp_attack}")
