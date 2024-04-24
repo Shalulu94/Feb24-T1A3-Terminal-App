@@ -118,6 +118,8 @@ def battle_sim():
 
         else:
             print("\nThat was an invalid attack! Please input one of the following options: 'Left Hook', 'Right Hook', 'Uppercut'")
+
+            input("\nPress Enter to try again")
             continue
 
         print(f"\nYour current HP is: {player_hp}")
@@ -143,70 +145,125 @@ def battle_sim():
 
         # Defence portion of the battle simulator. Users will input their defence action and CPU action will be randomly generated from their attack list
 
-        print("\nIt is now your turn to defend! Please enter one of the following actions: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
-
-        player_defence = input("\nPlease Enter your action: ")
-        cpu_attack = random.choice(cpu_att_action)
-        print(cpu_attack.lower == "right hook")
-        print(cpu_attack.lower == "left hook")
-        print(cpu_attack.lower == "uppercut")
-
-        print(player_defence.lower == "block right hook")
-        print(player_defence.lower == "block left hook")
-        print(player_defence.lower == "block uppercut")
         
-
-        if cpu_attack.lower() == "left hook":
-
-            if player_defence.lower == "block left hook":
-                player_hp = player_hp - opponent_block_damage
-
-                print(f"{opponent_first_name} threw a left hook")
-                print(f"\nYou blocked the left hook!")
-                print(f"\nYou took {opponent_block_damage} damage from your opponent!")
-            
-            else:
-                player_hp = player_hp - opponent_full_damage
-
-                print(f"{opponent_first_name} threw a left hook")
-                print(f"\nYou couldn't block the attack!")
-                print(f"\nYou took {opponent_full_damage} damage from your opponent!")
-
-        elif cpu_attack.lower() == "right hook":
-
-            if player_defence.lower == "block right hook":
-                player_hp = player_hp - opponent_block_damage
-
-                print(f"{opponent_first_name} threw a right hook")
-                print(f"\nYou blocked the right hook!")
-                print(f"\nYou took {opponent_block_damage} damage from your opponent!")
-            
-            else:
-                player_hp = player_hp - opponent_full_damage
-
-                print(f"{opponent_first_name} threw a right hook")
-                print(f"\nYou couldn't block the attack!")
-                print(f"\nYou took {opponent_full_damage} damage from your opponent!")
-
-        elif cpu_attack.lower() == "uppercut":
-
-            if player_defence.lower == "block uppercut":
-                player_hp = player_hp - opponent_block_damage
-
-                print(f"{opponent_first_name} threw a uppercut")
-                print(f"\nYou blocked the uppercut!")
-                print(f"\nYou took {opponent_block_damage} damage from your opponent!")
-            
-            else:
-                player_hp = player_hp - opponent_full_damage
-
-                print(f"{opponent_first_name} threw a uppercut")
-                print(f"\nYou couldn't block the attack!")
-                print(f"\nYou took {opponent_full_damage} damage from your opponent!")
+     
+        player_defence_low = ""
+     
         
-        else:
-            print("\nThat was an invalid attack! Please input one of the following options: 'Left Hook', 'Right Hook', 'Uppercut'")
-            continue
+        while player_defence_low == "":
+
+            os.system('clear')
+
+            print("\nIt is now your turn to defend! Please enter one of the following actions: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
+
+
+            player_defence = input("\nPlease Enter your action: ")
+            player_defence_low = player_defence.lower()
+            cpu_attack = random.choice(cpu_att_action)
+
+            if cpu_attack.lower() == "left hook":
+
+                if player_defence_low == "block left hook":
+                    player_hp = player_hp - opponent_block_damage
+
+                    print(f"{opponent_first_name} threw a left hook")
+                    print(f"\nYou blocked the left hook!")
+                    print(f"\nYou took {opponent_block_damage} damage from your opponent!")
+                
+                elif player_defence_low == "block right hook":
+                    player_hp = player_hp - opponent_full_damage
+
+                    print(f"{opponent_first_name} threw a left hook")
+                    print(f"\nYou couldn't block the attack!")
+                    print(f"\nYou took {opponent_full_damage} damage from your opponent!")
+
+                elif player_defence_low == "block uppercut":
+                    player_hp = player_hp - opponent_full_damage
+
+                    print(f"{opponent_first_name} threw a left hook")
+                    print(f"\nYou couldn't block the attack!")
+                    print(f"\nYou took {opponent_full_damage} damage from your opponent!")                    
+
+                else:
+                    print("\nThat was an invalid defence! Please input one of the following options: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
+
+                    input("\nPress Enter to try again")
+
+                    player_defence_low = ""
+
+               
+                    continue
+
+
+            elif cpu_attack.lower() == "right hook":
+
+                if player_defence_low == "block right hook":
+                    player_hp = player_hp - opponent_block_damage
+
+                    print(f"{opponent_first_name} threw a right hook")
+                    print(f"\nYou blocked the right hook!")
+                    print(f"\nYou took {opponent_block_damage} damage from your opponent!")
+                
+                elif player_defence_low == "block left hook":
+                    player_hp = player_hp - opponent_full_damage
+
+                    print(f"{opponent_first_name} threw a right hook")
+                    print(f"\nYou couldn't block the attack!")
+                    print(f"\nYou took {opponent_full_damage} damage from your opponent!")
+
+                elif player_defence_low == "block uppercut":
+                    player_hp = player_hp - opponent_full_damage
+
+                    print(f"{opponent_first_name} threw a right hook")
+                    print(f"\nYou couldn't block the attack!")
+                    print(f"\nYou took {opponent_full_damage} damage from your opponent!")    
+
+                else:
+                    print("\nThat was an invalid defence! Please input one of the following options: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
+                    
+                    input("\nPress Enter to try again")
+
+                    player_defence_low = ""
+
+                    continue
+
+            elif cpu_attack.lower() == "uppercut":
+
+                if player_defence_low == "block uppercut":
+                    player_hp = player_hp - opponent_block_damage
+
+                    print(f"{opponent_first_name} threw a uppercut")
+                    print(f"\nYou blocked the uppercut!")
+                    print(f"\nYou took {opponent_block_damage} damage from your opponent!")
+                
+                elif player_defence_low == "block right hook":
+                    player_hp = player_hp - opponent_full_damage
+
+                    print(f"{opponent_first_name} threw a uppercut")
+                    print(f"\nYou couldn't block the attack!")
+                    print(f"\nYou took {opponent_full_damage} damage from your opponent!")
+
+                elif player_defence_low == "block left hook":
+                    player_hp = player_hp - opponent_full_damage
+
+                    print(f"{opponent_first_name} threw a uppercut")
+                    print(f"\nYou couldn't block the attack!")
+                    print(f"\nYou took {opponent_full_damage} damage from your opponent!")
+
+                else:
+                    print("\nThat was an invalid defence! Please input one of the following options: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
+                    
+                    input("\nPress Enter to try again")
+
+                    player_defence_low = ""
+
+                    continue
+                   
+            else:
+                print("\nThat was an invalid attack! Please input one of the following options: 'Left Hook', 'Right Hook', 'Uppercut'")
+                continue
+
+            print(player_defence_low)
 
         print(f"\nYour current HP is: {player_hp}")
         print(f"Your opponent's HP is: {opponent_hp}")
