@@ -39,7 +39,7 @@ class Character():
         self.attack = attack
         self.defence = defence
         self.hp = hp
-        self.statpoints = 0
+        self.statpoints = 3
         self.battle_won = 0
         self.fight_style_name = fight_style_name
         
