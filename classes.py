@@ -10,7 +10,8 @@ class Character():
        
         while fight_style != range(1,4):
             if fight_style == 1: 
-                attack = 125
+                attack = 25 
+                # change this back to 125
                 defence = 50
                 hp = 600
                 break
