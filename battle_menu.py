@@ -5,6 +5,7 @@ import opponents
 import character_creation
 import os
 import battle
+import upgrade_stats
 
 
 def battle_screen():
@@ -17,11 +18,13 @@ def battle_screen():
                 
         while user_input != 5:
 
+            os.system('clear')
+
             print(f"Welcome to the locker room {character_creation.player.first_name}!")
             print("\nHere you will be able to prepare for your upcoming match")
             print("\nWithin the locker room you can:")
             print("\n1. View your upcoming opponent")
-            print("2. View your fighter stats")
+            print("2. View your fighter details")
             print("3. Upgrade figher stats")
             print("4. Go to Battle!")
             print("5. Back to main menu")
@@ -34,7 +37,7 @@ def battle_screen():
             elif user_input == 2:
                 character_creation.character_details()
             elif user_input == 3:
-                print("View character upgrade screen")
+                upgrade_stats.upgrades()
             elif user_input == 4:
                 battle.battle_sim()
             elif user_input == 5: 

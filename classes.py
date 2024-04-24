@@ -8,38 +8,40 @@ class Character():
         self.full_name = f"{first_name} \"{self.alias}\" {self.last_name}"
         self.fight_style = fight_style
        
-        while fight_style != range(1,4):
-            if fight_style == 1: 
-                attack = 125 
-                # change this back to 125
-                defence = 50
-                hp = 600
-                break
-            elif fight_style == 2:
-                attack = 100
-                defence = 75
-                hp = 600
-                break
-            elif fight_style == 3:
-                attack = 100
-                defence = 50
-                hp = 750
-                break
-            else: 
-                os.system('clear')
-                print("That fight style is not valid.")
-                print("There are three fighting styles to choose from:")
-                print("\n1. Aggressive - Your fighter will deal more damage with their attacks ")
-                print("2. Defensive - Your fighter will take less damage on successful blocks")
-                print("3. Tanky - Your fighter has a higher health pool\n")
+        if fight_style == 1: 
+            attack = 125 
+            defence = 50
+            hp = 600
+            fight_style_name = "Aggressive"
+            
+        elif fight_style == 2:
+            attack = 100
+            defence = 75
+            hp = 600
+            fight_style_name = "Defensive"
+           
+        elif fight_style == 3:
+            attack = 100
+            defence = 50
+            hp = 750
+            fight_style_name = "Tanky"
+          
+        else: 
+            os.system('clear')
+            print("That fight style is not valid.")
+            print("There are three fighting styles to choose from:")
+            print("\n1. Aggressive - Your fighter will deal more damage with their attacks ")
+            print("2. Defensive - Your fighter will take less damage on successful blocks")
+            print("3. Tanky - Your fighter has a higher health pool\n")
 
-                fight_style = int(input("Please enter in the number corresponding to the fighting style you want to adopt: "))
+            fight_style = int(input("Please enter in the number corresponding to the fighting style you want to adopt: "))
 
         self.attack = attack
         self.defence = defence
         self.hp = hp
         self.statpoints = 0
         self.battle_won = 0
+        self.fight_style_name = fight_style_name
         
         
     

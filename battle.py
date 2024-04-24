@@ -76,7 +76,7 @@ def battle_sim():
             if cpu_defence.lower() == "block left hook":
                 opponent_hp = opponent_hp - player_block_damage
 
-                print("You throw a Left Hook")
+                print("\nYou throw a Left Hook")
                 print(f"\n{opponent_first_name} blocked your Left Hook!")
                 print(f"\nYou dealt {player_block_damage} damage to your opponent!")
             else:
@@ -91,7 +91,7 @@ def battle_sim():
             if cpu_defence.lower() == "block right hook":
                 opponent_hp = opponent_hp - player_block_damage
 
-                print("You throw a Right Hook")
+                print("\nYou throw a Right Hook")
                 print(f"\n{opponent_first_name} blocked your Right Hook!")
                 print(f"You dealt {player_block_damage} damage to your opponent!")
             else:
@@ -106,7 +106,7 @@ def battle_sim():
             if cpu_defence.lower() == "block uppercut":
                 opponent_hp = opponent_hp - player_block_damage
 
-                print("You throw an Uppercut")
+                print("\nYou throw an Uppercut")
                 print(f"\n{opponent_first_name} blocked your Uppercut!")
                 print(f"You dealt {player_block_damage} damage to your opponent!")
             else:
@@ -154,7 +154,8 @@ def battle_sim():
 
             os.system('clear')
 
-            print("\nIt is now your turn to defend! Please enter one of the following actions: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
+            print("\nIt is now your turn to defend!")
+            print("Please enter one of the following actions: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
 
 
             player_defence = input("\nPlease Enter your action: ")
@@ -166,26 +167,26 @@ def battle_sim():
                 if player_defence_low == "block left hook":
                     player_hp = player_hp - opponent_block_damage
 
-                    print(f"{opponent_first_name} threw a left hook")
+                    print(f"\n{opponent_first_name} threw a left hook")
                     print(f"\nYou blocked the left hook!")
                     print(f"\nYou took {opponent_block_damage} damage from your opponent!")
                 
                 elif player_defence_low == "block right hook":
                     player_hp = player_hp - opponent_full_damage
 
-                    print(f"{opponent_first_name} threw a left hook")
+                    print(f"\n{opponent_first_name} threw a left hook")
                     print(f"\nYou couldn't block the attack!")
                     print(f"\nYou took {opponent_full_damage} damage from your opponent!")
 
                 elif player_defence_low == "block uppercut":
                     player_hp = player_hp - opponent_full_damage
 
-                    print(f"{opponent_first_name} threw a left hook")
+                    print(f"\n{opponent_first_name} threw a left hook")
                     print(f"\nYou couldn't block the attack!")
                     print(f"\nYou took {opponent_full_damage} damage from your opponent!")                    
 
                 else:
-                    print("\nThat was an invalid defence! Please input one of the following options: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
+                    print("\nThat was an invalid defence option! Please input one of the following options: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
 
                     input("\nPress Enter to try again")
 
@@ -200,26 +201,26 @@ def battle_sim():
                 if player_defence_low == "block right hook":
                     player_hp = player_hp - opponent_block_damage
 
-                    print(f"{opponent_first_name} threw a right hook")
+                    print(f"\n{opponent_first_name} threw a right hook")
                     print(f"\nYou blocked the right hook!")
                     print(f"\nYou took {opponent_block_damage} damage from your opponent!")
                 
                 elif player_defence_low == "block left hook":
                     player_hp = player_hp - opponent_full_damage
 
-                    print(f"{opponent_first_name} threw a right hook")
+                    print(f"\n{opponent_first_name} threw a right hook")
                     print(f"\nYou couldn't block the attack!")
                     print(f"\nYou took {opponent_full_damage} damage from your opponent!")
 
                 elif player_defence_low == "block uppercut":
                     player_hp = player_hp - opponent_full_damage
 
-                    print(f"{opponent_first_name} threw a right hook")
+                    print(f"\n{opponent_first_name} threw a right hook")
                     print(f"\nYou couldn't block the attack!")
                     print(f"\nYou took {opponent_full_damage} damage from your opponent!")    
 
                 else:
-                    print("\nThat was an invalid defence! Please input one of the following options: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
+                    print("\nThat was an invalid defence option! Please input one of the following options: 'Block Left Hook', 'Block Right Hook', 'Block Uppercut'")
                     
                     input("\nPress Enter to try again")
 
@@ -232,21 +233,21 @@ def battle_sim():
                 if player_defence_low == "block uppercut":
                     player_hp = player_hp - opponent_block_damage
 
-                    print(f"{opponent_first_name} threw a uppercut")
+                    print(f"\n{opponent_first_name} threw a uppercut")
                     print(f"\nYou blocked the uppercut!")
                     print(f"\nYou took {opponent_block_damage} damage from your opponent!")
                 
                 elif player_defence_low == "block right hook":
                     player_hp = player_hp - opponent_full_damage
 
-                    print(f"{opponent_first_name} threw a uppercut")
+                    print(f"\n{opponent_first_name} threw a uppercut")
                     print(f"\nYou couldn't block the attack!")
                     print(f"\nYou took {opponent_full_damage} damage from your opponent!")
 
                 elif player_defence_low == "block left hook":
                     player_hp = player_hp - opponent_full_damage
 
-                    print(f"{opponent_first_name} threw a uppercut")
+                    print(f"\n{opponent_first_name} threw a uppercut")
                     print(f"\nYou couldn't block the attack!")
                     print(f"\nYou took {opponent_full_damage} damage from your opponent!")
 
@@ -260,10 +261,9 @@ def battle_sim():
                     continue
                    
             else:
-                print("\nThat was an invalid attack! Please input one of the following options: 'Left Hook', 'Right Hook', 'Uppercut'")
+                print("\nThat was an invalid attack option! Please input one of the following options: 'Left Hook', 'Right Hook', 'Uppercut'")
                 continue
 
-            print(player_defence_low)
 
         print(f"\nYour current HP is: {player_hp}")
         print(f"Your opponent's HP is: {opponent_hp}")

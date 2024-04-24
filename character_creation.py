@@ -26,7 +26,7 @@ def character_create():
 
             
         print(f"\nYour fighter's name is: {player.full_name}")
-        print(f"\nYour fighting style is: {player.fight_style}")
+        print(f"\nYour fighting style is: {player.fight_style_name}")
         print(f"Your attack is: {player.attack}")
         print(f"Your defence is: {player.defence}")
         print(f"Your total HP is: {player.hp}")
@@ -45,11 +45,12 @@ def character_create():
 def character_details():
     try:
         os.system('clear')
-        print(f"\nYour fighter's name is: {player.first_name} \"{player.alias}\" {player.last_name}")
-        print(f"\nYour fighting style is: {player.fight_style}")
+        print(f"\nYour fighter's name is: {player.full_name}")
+        print(f"\nYour fighting style is: {player.fight_style_name}")
         print(f"Your attack is: {player.attack}")
         print(f"Your defence is: {player.defence}")
-        print(f"Your total HP is: {player.hp}\n")
+        print(f"Your total HP is: {player.hp}")
+        print(f"Available Stat points: {player.statpoints}\n")
 
         input("\nPress Enter to return back to the main menu")
         os.system('clear')
