@@ -5,9 +5,8 @@ import os
 
 # Local imports
 from classes import Character
-from functions import character_create
-from functions import character_details
-from functions import battle_menu
+import character_creation
+import battle_menu
 
 # Delay print text
 def print_pause(message):
@@ -40,11 +39,11 @@ def main_menu():
             
             
             if user_input == 1:
-                character_create()
+                character_creation.character_create()
             elif user_input == 2:
-                battle_menu()
+                battle_menu.battle_screen()
             elif user_input == 3:
-                character_details()
+                character_creation.character_details()
             elif user_input == 4:
                 print("Thank you for playing!")
                 break
