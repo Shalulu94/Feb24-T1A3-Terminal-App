@@ -32,12 +32,16 @@ def opponent():
                 print(f"Defence: {sally.opp_defence}")
                 print(f"Hp: {sally.opp_hp}")   
             
-            else:
+            elif character_creation.player.battle_won == 2:
                 print(f"Your next opponent will be {pimmsy.opp_full_name}!")
                 print(f"\n{pimmsy.opp_full_name}'s stats are as below:")
                 print(f"\nAttack: {pimmsy.opp_attack}")
                 print(f"Defence: {pimmsy.opp_defence}")
-                print(f"Hp: {pimmsy.opp_hp}")   
+                print(f"Hp: {pimmsy.opp_hp}")  
+            
+            else:
+                print("You've defeated all the opponents and have been crowned World Champion!")
+                print("Game over!")
             
             input("\nPress enter to return to Battle menu")
 
