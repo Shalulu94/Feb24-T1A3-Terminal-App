@@ -13,22 +13,7 @@ def battle_screen():
 
     user_input = 0
 
-    if character_creation.player.battle_won > 0 and character_creation.player.battle_won <4:
-
-        print("Congratulation's on your win!")
-        print("\nYou've been awarded 3 stat points to upgrade your fighter")
-        print("You can spend these stat points by visiting the upgrade menu from the locker room")
-
-        input("\nPress Enter to return to the locker room")
-
-
-    elif character_creation.player.battle_won == 4:
-        print("Congratulation's you've defeated all of the opponent's and are crowned World Champion!!")
-
-        input("\nPress enter to return to the locker room")
-
-    else:
-        pass
+    
         
     
 
@@ -36,6 +21,26 @@ def battle_screen():
 
                 
         while user_input != 5:
+
+            if character_creation.player.battle_won > 0 and character_creation.player.battle_won <3:
+                os.system('clear')
+
+                print("Congratulation's on your win!")
+                print("\nYou've been awarded 3 stat points to upgrade your fighter")
+                print("You can spend these stat points by visiting the upgrade menu from the locker room")
+
+                input("\nPress Enter to return to the locker room")
+
+
+            elif character_creation.player.battle_won == 3:
+                os.system('clear')
+                
+                print("Congratulation's you've defeated all of the opponent's and are crowned World Champion!!")
+
+                input("\nPress enter to return to the locker room")
+
+            else:
+                pass
 
             os.system('clear')
 
