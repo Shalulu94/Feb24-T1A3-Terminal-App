@@ -1,9 +1,10 @@
 # Character creation
+import os
+
 from classes import Character
 from classes import Opponent
 import opponents
 import character_creation
-import os
 import battle
 import upgrade_stats
 

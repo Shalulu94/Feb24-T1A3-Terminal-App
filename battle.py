@@ -1,10 +1,12 @@
+import os
+import random
+
 from classes import Character
 from classes import Opponent
 import battle_menu
 import opponents
 import character_creation
-import os
-import random
+
 
 
 def battle_sim():
@@ -40,7 +42,7 @@ def battle_sim():
         opponent_hp = opponents.pimmsy.opp_hp
         opponent_full_damage = opponents.pimmsy.opp_attack
         opponent_block_damage = opponents.pimmsy.opp_attack - character_creation.player.defence
-        
+
     else:
         print("Congratulations, you have defeated all of the opponents and been crowned World Champion!")
 

@@ -1,5 +1,6 @@
-from classes import Character
 import os
+
+from classes import Character
 
 
 def character_create():
