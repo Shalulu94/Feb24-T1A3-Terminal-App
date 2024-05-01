@@ -1,5 +1,6 @@
 # Character creation
 import os
+import time
 
 from classes import Character
 from classes import Opponent
@@ -7,16 +8,13 @@ import opponents
 import character_creation
 import battle
 import upgrade_stats
+import delay
 
 
 def battle_screen():
     os.system('clear')
 
     user_input = 0
-
-    
-        
-    
 
     try:
 
@@ -40,22 +38,22 @@ def battle_screen():
 
                 input("\nPress enter to return to the locker room")
 
-            else:
-                pass
-
+         
             os.system('clear')
 
-            print(f"Welcome to the locker room {character_creation.player.first_name}!")
-            print("\nHere you will be able to prepare for your upcoming match")
-            print("\nWithin the locker room you can:")
-            print("\n1. View your upcoming opponent")
-            print("2. View your fighter details")
-            print("3. Upgrade figher stats")
-            print("4. Go to Battle!")
-            print("5. Back to main menu")
+            delay.print_delay(f"Welcome to the locker room {character_creation.player.first_name}!\n")
+            delay.print_delay("\nHere you will be able to prepare for your upcoming match\n")
+            time.sleep(0.75)
+
+            delay.print_delay("\nWithin the locker room you can:")
+            delay.print_pause("\n[1] View your upcoming opponent")
+            delay.print_pause("[2] View your fighter details")
+            delay.print_pause("[3] Upgrade figher stats")
+            delay.print_pause("[4] Go to Battle!")
+            delay.print_pause("[5] Back to main menu")
 
 
-            user_input = int(input("Please input a number out of the below options to continue: "))
+            user_input = int(input("\nPlease input a number out of the below options to continue: "))
 
             if user_input == 1:
                 opponents.opponent()

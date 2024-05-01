@@ -1,23 +1,28 @@
 # Sys imports
 import random
-import time
 import os
+import time
 
 # Local imports
 from classes import Character
 import character_creation
 import battle_menu
+import delay
 
-# Delay print text
-def print_pause(message):
-    print(message)
-    time.sleep(0.5)
 
 # Welcome introductory text
-print_pause("Welcome to Fight Night!")
-print_pause("You are about to enter a boxing tournament with the chance to be crowned the World Boxing Champion!!")
-print_pause("You will compete in three consecutive matches")
-print_pause("Defeat all 3 opponents and be crowned the champion!\n")
+
+os.system('clear')
+
+delay.print_delay("Welcome to Fight Night!\n")
+time.sleep(0.75)
+delay.print_delay("You are about to enter a boxing tournament with the chance to be crowned the World Boxing Champion!!\n")
+time.sleep(0.5)
+delay.print_delay("\nYou will compete in three consecutive matches.\n")
+time.sleep(0.5)
+delay.print_delay("\nDefeat all 3 opponents and be crowned the champion!\n")
+
+time.sleep(1.5)
 
 # os.system('clear')
 
@@ -30,11 +35,13 @@ def main_menu():
 
     while user_input != 4:
         try:
-            print("Please input a number out of the below options to continue:\n")
-            print("1. Create a new fighter")
-            print("2. Enter the Tournament")
-            print("3. View fighter details")
-            print("4. Exit Game")            
+            
+            delay.print_delay("\nPlease input a number out of the below options to continue:\n")
+            time.sleep(0.75)
+            delay.print_pause("\n[1] Create a new fighter")
+            delay.print_pause("[2] Enter the Tournament")
+            delay.print_pause("[3] View fighter details")
+            delay.print_pause("[4] Exit Game")            
 
             user_input = int(input())
             
@@ -52,7 +59,7 @@ def main_menu():
                 print("That is an invalid selection. Please enter a number between 1 and 4")
 
         except ValueError:
-            print("That's an invalid selection. Please enter a number between 1 and 4")
+            print("That's an invalid selection. Please enter a number between 1 and 4\n")
     
 
 main_menu()

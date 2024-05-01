@@ -1,39 +1,53 @@
 import os
+import time
 
 from classes import Character
+import delay
+
 
 
 def character_create():
     
     try:
         os.system('clear')
-        print("Welcome to the fighter creation menu\n")
-        print("Here you will be able to create a new fighter to compete with in the boxing championship!\n")
+
+        delay.print_delay("Welcome to the fighter creation menu\n")
+        delay.print_delay("Here you will be able to create a new fighter to compete with in the boxing championship!\n")
+        time.sleep(0.75)
 
 
-        player_firstname = input("Please enter your fighter's first name: ")
-        player_lastname = input("Please enter your fighter's last name: ")
-        player_alias = input("Please enter your fighter's nickname: ")
+        delay.print_delay("Please enter your fighter's first name: ")
+        player_firstname = input()
 
-        print("\nYour fighting style dictates your fighter's strength in the ring.")
-        print("There are three fighting styles to choose from:")
-        print("\n1. Aggressive - Your fighter will deal more damage with their attacks ")
-        print("2. Defensive - Your fighter will take less damage on successful blocks")
-        print("3. Tanky - Your fighter has a higher health pool\n")
+        delay.print_delay("Please enter your fighter's last name: ")
+        player_lastname = input()
 
-        player_fight_style = int(input("Please enter in the number corresponding to the fighting style you want to adopt: "))
+        delay.print_delay("Please enter your fighter's nickname: ")
+        player_alias = input()
+
+        delay.print_delay("\nYour fighting style dictates your fighter's strength in the ring.")
+        delay.print_delay("\nThere are three fighting styles to choose from:\n")
+        time.sleep(0.75)
+
+        delay.print_pause("\n[1] Aggressive - Your fighter will deal more damage with their attacks ")
+        delay.print_pause("[2] Defensive - Your fighter will take less damage on successful blocks")
+        delay.print_pause("[3] Tanky - Your fighter has a higher health pool\n")
+
+        delay.print_delay("\nPlease enter in the number corresponding to the fighting style you want to adopt: ")
+        player_fight_style = int(input())
 
         global player 
         player = Character(player_firstname, player_lastname, player_alias, player_fight_style)
 
             
-        print(f"\nYour fighter's name is: {player.full_name}")
-        print(f"\nYour fighting style is: {player.fight_style_name}")
-        print(f"Your attack is: {player.attack}")
-        print(f"Your defence is: {player.defence}")
-        print(f"Your total HP is: {player.hp}")
+        delay.print_delay(f"\nYour fighter's name is: {player.full_name}")
+        delay.print_delay(f"\nYour fighting style is: {player.fight_style_name}")
+        delay.print_delay(f"\nYour attack is: {player.attack}")
+        delay.print_delay(f"\nYour defence is: {player.defence}")
+        delay.print_delay(f"\nYour total HP is: {player.hp}")
 
-        input("\nPress Enter to return back to the main menu")
+        delay.print_pause("\nPress Enter to return back to the main menu")
+        input()
 
         os.system('clear')
 
@@ -48,12 +62,13 @@ def character_create():
 def character_details():
     try:
         os.system('clear')
-        print(f"\nYour fighter's name is: {player.full_name}")
-        print(f"\nYour fighting style is: {player.fight_style_name}")
-        print(f"Your attack is: {player.attack}")
-        print(f"Your defence is: {player.defence}")
-        print(f"Your total HP is: {player.hp}")
-        print(f"Available Stat points: {player.statpoints}\n")
+
+        delay.print_delay(f"\nYour fighter's name is: {player.full_name}")
+        delay.print_delay(f"\nYour fighting style is: {player.fight_style_name}")
+        delay.print_delay(f"\nYour attack is: {player.attack}")
+        delay.print_delay(f"\nYour defence is: {player.defence}")
+        delay.print_delay(f"\nYour total HP is: {player.hp}")
+        delay.print_delay(f"\nAvailable Stat points: {player.statpoints}\n")
 
         input("\nPress Enter to return back to the main menu")
         os.system('clear')
