@@ -5,10 +5,10 @@ import delay
 import time
 
 
-sandy = Opponent("Sandy", "Huynh", "Chanel", 80, 40, 500)
-pimmsy = Opponent("Pimmsy", "Huynh", "Big Dog", 125, 50, 1500)
-sally = Opponent("Sally", "Huynh", "The Baker", 100, 50, 800)
-jager = Opponent("Jager", "Huynh", "Sleepy", 100, 80, 800)
+bailey = Opponent("Bailey", "Huynh", "Chanel", 80, 40, 500)
+pimmsy = Opponent("Pimmsy", "White", "Big Dog", 150, 100, 1500)
+johnny = Opponent("Johnny", "Yap", "The Bulldog", 125, 50, 800)
+jager = Opponent("Jager", "Brown", "Sleepy", 100, 80, 800)
 
 
 def opponent():
@@ -20,23 +20,24 @@ def opponent():
     while character_creation.player.battle_won < 4:
         if character_creation.player.battle_won == 0:
 
-            delay.print_delay(f"Your next opponent will be {sandy.opp_full_name}!\n")
+            delay.print_delay(f"Your next opponent will be {bailey.opp_full_name}!\n")
             time.sleep(0.75)
 
-            delay.print_delay(f"\n{sandy.opp_full_name}'s stats are as below:")
-            delay.print_pause(f"\nAttack: {sandy.opp_attack}")
-            delay.print_pause(f"Defence: {sandy.opp_defence}")
-            delay.print_pause(f"Hp: {sandy.opp_hp}")   
+            delay.print_delay(f"\n{bailey.opp_full_name}'s stats are as below:")
+            time.sleep(0.5)
+            delay.print_pause(f"\nAttack: {bailey.opp_attack}")
+            delay.print_pause(f"Defence: {bailey.opp_defence}")
+            delay.print_pause(f"Hp: {bailey.opp_hp}")   
 
         elif character_creation.player.battle_won == 1:
 
-            delay.print_delay(f"Your next opponent will be {sally.opp_full_name}!\n")
+            delay.print_delay(f"Your next opponent will be {johnny.opp_full_name}!\n")
             time.sleep(0.75)
 
-            delay.print_delay(f"\n{sally.opp_full_name}'s stats are as below:")
-            delay.print_pause(f"\nAttack: {sally.opp_attack}")
-            delay.print_pause(f"Defence: {sally.opp_defence}")
-            delay.print_pause(f"Hp: {sally.opp_hp}")   
+            delay.print_delay(f"\n{johnny.opp_full_name}'s stats are as below:")
+            delay.print_pause(f"\nAttack: {johnny.opp_attack}")
+            delay.print_pause(f"Defence: {johnny.opp_defence}")
+            delay.print_pause(f"Hp: {johnny.opp_hp}")   
         
         elif character_creation.player.battle_won == 2:
 
