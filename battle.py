@@ -6,6 +6,8 @@ from classes import Opponent
 import battle_menu
 import opponents
 import character_creation
+import time
+import delay
 
 
 
@@ -18,9 +20,8 @@ def battle_sim():
     player_full_damage = character_creation.player.attack
     player_block_damage = character_creation.player.attack - opponents.sandy.opp_defence
 
-    # opponent_hp = opponents.sandy.opp_hp
-    # opponent_full_damage = opponents.sandy.opp_attack
-    # opponent_block_damage = opponents.sandy.opp_attack - character_creation.player.defence
+    # Identifies which CPU opponent player will fight 
+    # Dependent on how many wins they have secured
 
     if character_creation.player.battle_won == 0:
         opponent_first_name = opponents.sandy.opp_first_name
@@ -53,23 +54,29 @@ def battle_sim():
     cpu_att_action = ["left hook", "right hook", "uppercut"]
     cpu_def_action = ["Block Left Hook", "Block Right Hook", "Block Uppercut"]
 
-    print(f"Ladies and Gentlemen, please welcome to the arena our our fighter's for the tonight.")
-    print(f"\nIn the red corner, we have {character_creation.player.full_name}!")
-    print(f"\nIn the blue corner, we have {opponent_full_name}!")
-    print("Fighter's to your corners...")
-    print("Let's get ready to R-R-RUMBLEEE!!")
+    delay.print_delay(f"Ladies and Gentlemen, please welcome to the arena our our fighter's for the tonight.\n")
+    time.sleep(0.75)
+    delay.print_delay(f"\nIn the red corner, we have {character_creation.player.full_name}!\n")
+    time.sleep(0.75)
+    delay.print_delay(f"\nIn the blue corner, we have {opponent_full_name}!\n")
+    time.sleep(0.75)
+    delay.print_delay("Fighter's to your corners...")
+    time.sleep(0.5)
+    delay.print_delay("Let's get ready to R-R-RUMBLEEE!!")
 
-    input("\nPress Enter to begin the match")
+    delay.print_pause("\nPress Enter to begin the match")
+    input()
 
     while player_hp > 0 and opponent_hp > 0:
 
         os.system('clear')
 
         print(f"\nYour current HP is: {player_hp}")
-        print(f"Your opponent's HP is: {opponent_hp}")
+        print(f"Your opponent's HP is: {opponent_hp}\n")
 
-        print("\nIt is your turn to attack! Please enter one of the following actions: 'Left Hook', 'Right Hook', 'Uppercut'")
+        delay.print_delay("It is your turn to attack! Please enter one of the following actions: [Left Hook], [Right Hook], [Uppercut]\n")
 
+        delay.print_delay()
         player_attack = input("\nPlease Enter your action: ")
         cpu_defence = random.choice(cpu_def_action)
         

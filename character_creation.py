@@ -44,7 +44,7 @@ def character_create():
         delay.print_delay(f"\nYour fighting style is: {player.fight_style_name}")
         delay.print_delay(f"\nYour attack is: {player.attack}")
         delay.print_delay(f"\nYour defence is: {player.defence}")
-        delay.print_delay(f"\nYour total HP is: {player.hp}")
+        delay.print_delay(f"\nYour total HP is: {player.hp}\n")
 
         delay.print_pause("\nPress Enter to return back to the main menu")
         input()

@@ -24,7 +24,7 @@ def battle_screen():
             if character_creation.player.battle_won > 0 and character_creation.player.battle_won <3:
                 os.system('clear')
 
-                print("Congratulation's on your win!")
+                delay.print_delay("Congratulation's on your win!")
                 print("\nYou've been awarded 3 stat points to upgrade your fighter")
                 print("You can spend these stat points by visiting the upgrade menu from the locker room")
 
@@ -46,14 +46,16 @@ def battle_screen():
             time.sleep(0.75)
 
             delay.print_delay("\nWithin the locker room you can:")
+            time.sleep(0.75)
+
             delay.print_pause("\n[1] View your upcoming opponent")
             delay.print_pause("[2] View your fighter details")
             delay.print_pause("[3] Upgrade figher stats")
             delay.print_pause("[4] Go to Battle!")
-            delay.print_pause("[5] Back to main menu")
+            delay.print_pause("[5] Back to main menu\n")
 
-
-            user_input = int(input("\nPlease input a number out of the below options to continue: "))
+            delay.print_delay("\nPlease input a number out of the above options to continue: ")
+            user_input = int(input())
 
             if user_input == 1:
                 opponents.opponent()
