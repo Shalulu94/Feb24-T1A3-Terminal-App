@@ -18,17 +18,17 @@ def battle_sim():
 
     player_hp = character_creation.player.hp
     player_full_damage = character_creation.player.attack
-    player_block_damage = character_creation.player.attack - opponents.bailey.opp_defence
+    player_block_damage = character_creation.player.attack - opponents.jager.opp_defence
 
     # Identifies which CPU opponent player will fight 
     # Dependent on how many wins they have secured
 
     if character_creation.player.battle_won == 0:
-        opponent_first_name = opponents.bailey.opp_first_name
-        opponent_full_name = opponents.bailey.opp_full_name
-        opponent_hp = opponents.bailey.opp_hp
-        opponent_full_damage = opponents.bailey.opp_attack
-        opponent_block_damage = opponents.bailey.opp_attack - character_creation.player.defence
+        opponent_first_name = opponents.jager.opp_first_name
+        opponent_full_name = opponents.jager.opp_full_name
+        opponent_hp = opponents.jager.opp_hp
+        opponent_full_damage = opponents.jager.opp_attack
+        opponent_block_damage = opponents.jager.opp_attack - character_creation.player.defence
     
     elif character_creation.player.battle_won == 1:
         opponent_first_name = opponents.johnny.opp_first_name
