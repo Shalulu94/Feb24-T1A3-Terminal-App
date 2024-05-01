@@ -2,6 +2,7 @@
 import random
 import os
 import time
+from colored import Fore, Back, Style
 
 # Local imports
 from classes import Character
@@ -10,13 +11,14 @@ import battle_menu
 import delay
 
 
+
 # Welcome introductory text
 
 os.system('clear')
 
-delay.print_delay("Welcome to Fight Night!\n")
+delay.print_delay(f"Welcome to Fight Night!\n")
 time.sleep(0.75)
-delay.print_delay("You are about to enter a boxing tournament with the chance to be crowned the World Boxing Champion!!\n")
+delay.print_delay(f"{Fore.red}You are about to enter a boxing tournament with the chance to be crowned the World Boxing Champion!!\n")
 time.sleep(0.5)
 delay.print_delay("\nYou will compete in three consecutive matches.\n")
 time.sleep(0.5)

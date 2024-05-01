@@ -14,7 +14,7 @@ def upgrades():
 
             delay.print_delay("Welcome to the upgrade menu\n")
             delay.print_delay("\nHere you will be able to spend available stat points to upgrade your fighter's stats\n")
-            delay.print_delay(f"you currently have {character_creation.player.statpoints} available to use\n")
+            delay.print_delay(f"You currently have {character_creation.player.statpoints} available stat points to use\n")
             delay.print_delay("\nPlease select from the following options:")
             delay.print_pause("\n[1] Allocate stat points")
             delay.print_pause("[2] View your fighter details")
