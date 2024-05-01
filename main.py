@@ -16,13 +16,13 @@ import delay
 
 os.system('clear')
 
-delay.print_delay(f"Welcome to Fight Night!\n")
+delay.print_delay(f"{Fore.magenta}Welcome to {Style.bold}{Style.underline}Fight Night!{Style.reset}\n")
 time.sleep(0.75)
-delay.print_delay(f"{Fore.red}You are about to enter a boxing tournament with the chance to be crowned the World Boxing Champion!!\n")
+delay.print_delay(f"{Fore.magenta}\nYou are about to enter a boxing tournament with the chance to be crowned the {Style.bold}{Style.underline}{Style.blink}World Boxing Champion!!{Style.reset}\n")
 time.sleep(0.5)
-delay.print_delay("\nYou will compete in three consecutive matches.\n")
+delay.print_delay(f"{Fore.magenta}\nYou will compete in three consecutive matches.\n")
 time.sleep(0.5)
-delay.print_delay("\nDefeat all 3 opponents and be crowned the champion!\n")
+delay.print_delay(f"\nDefeat all 3 opponents and be crowned the champion!\n")
 
 time.sleep(1.5)
 
@@ -40,10 +40,10 @@ def main_menu():
             
             delay.print_delay("\nPlease input a number out of the below options to continue:\n")
             time.sleep(0.75)
-            delay.print_pause("\n[1] Create a new fighter")
-            delay.print_pause("[2] Enter the Tournament")
-            delay.print_pause("[3] View fighter details")
-            delay.print_pause("[4] Exit Game")            
+            delay.print_pause(f"\n{Fore.cyan}[1]{Style.reset} Create a new fighter")
+            delay.print_pause(f"{Fore.cyan}[2]{Fore.magenta} Enter the Tournament")
+            delay.print_pause(f"{Fore.cyan}[3] View fighter details")
+            delay.print_pause(f"{Fore.cyan}[4] Exit Game")            
 
             user_input = int(input())
             
