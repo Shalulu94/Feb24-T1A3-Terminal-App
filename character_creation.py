@@ -1,6 +1,7 @@
 from classes import Character
 import os
 
+
 def character_create():
     
     try:
@@ -42,6 +43,7 @@ def character_create():
 
         character_create()
 
+
 def character_details():
     try:
         os.system('clear')
@@ -54,6 +56,7 @@ def character_details():
 
         input("\nPress Enter to return back to the main menu")
         os.system('clear')
+
     except NameError:
         print("You have not created a fighter yet! Please create a new fighter from the main menu")
         input("\nPress Enter to return back to the main menu")

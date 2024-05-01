@@ -22,6 +22,7 @@ print_pause("Defeat all 3 opponents and be crowned the champion!\n")
 # os.system('clear')
 
 # Enter the Main menu
+
 def main_menu():
      
     user_input = 0

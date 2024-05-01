@@ -3,6 +3,7 @@ from classes import Opponent
 import character_creation
 import os
 
+
 def upgrades():
    
     try:
@@ -75,6 +76,7 @@ def upgrades():
             print("\nYou currently do not have any statpoints available to spend")
 
             input("\nPress Enter to return to previous menu")
+            
     except ValueError:
         print("\nThat was an invalid selection")
         print("Please enter a number between 1 and 3")
