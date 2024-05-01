@@ -8,7 +8,7 @@ import time
 bailey = Opponent("Bailey", "Huynh", "Chanel", 80, 40, 500)
 pimmsy = Opponent("Pimmsy", "White", "Big Dog", 150, 100, 1500)
 johnny = Opponent("Johnny", "Yap", "The Bulldog", 125, 50, 800)
-jager = Opponent("Jager", "Brown", "Sleepy", 100, 80, 800)
+jager = Opponent("Jager", "Brown", "Sleepyhead", 100, 80, 800)
 
 
 def opponent():
