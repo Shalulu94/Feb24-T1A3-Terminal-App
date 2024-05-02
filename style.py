@@ -23,3 +23,5 @@ err: str = f"{Fore.light_red}"
 hp: str = f"{Fore.green}"
 
 hit: str = f"{Fore.red}{Style.bold}{Style.underline}"
+
+dfnd: str = f"{Fore.blue}"
