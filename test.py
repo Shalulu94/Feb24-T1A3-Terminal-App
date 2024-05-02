@@ -10,8 +10,10 @@ def opponent():
     print(Sandy.opp_attack)
     print(Sandy.opp_defence)
     print(Sandy.opp_hp)
-    
+
+
 opponent()
+
 
 def battle():
     print(Sandy.opp_attack)
@@ -21,5 +23,3 @@ def battle():
 
 
 battle()
-
-
