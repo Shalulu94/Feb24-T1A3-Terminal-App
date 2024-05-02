@@ -32,9 +32,10 @@ Please follow this [link](https://learn.microsoft.com/en-us/windows/wsl/install)
 Next, we will need to ensure that you have a version python installed.
 - In your terminal, enter the following:
 
-    '''
+'''
+
     python3 --version
-    '''
+'''
 
 
 
