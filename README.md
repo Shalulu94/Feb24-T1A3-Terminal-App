@@ -6,9 +6,8 @@ As part of my Term 1 Assignment 3 I have decided to create a turn based battle s
 
 Upon winning all three matches, the player will be crowned World Boxing Champion!
 
-## Links
+## Source Code
 - [Github Repository](https://github.com/Shalulu94/Feb24-T1A3-Terminal-App)
-- 
 
 ## Code Style Guide
 
@@ -18,7 +17,11 @@ For more information on the PEP8 guidelines, please visit this [website](https:/
 
 In terms of limitations, due to my game having significant text as part of the battle simulator, upgrade menu's and battle menus along with colored styling to prompt players when input's are required, certain line items exceed the 79 character limit. 
 
-I have used a substitutions of different variables to reduce character limits for styling coventions within the 'colored' package, however character limits are still high. 
+I have used substitutions of different variables to reduce character limits for styling coventions within the 'colored' package, however character limits are still high. 
+
+## Launch Guide
+
+
 
 
 
