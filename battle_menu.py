@@ -9,7 +9,7 @@ import character_creation
 import battle
 import upgrade_stats
 import delay
-from colored import Fore, Back, Style
+import style
 
 
 def battle_screen():
@@ -25,25 +25,25 @@ def battle_screen():
             if character_creation.player.battle_won == 3:
                 os.system('clear')
                 
-                delay.print_delay("Congratulation's you've defeated all of the opponent's and are crowned World Champion!!\n")
-                delay.print_delay("\nPress enter to return to the locker room")
+                delay.print_delay(f"{style.default}Congratulation's you've defeated all of the opponent's and are crowned {style.defbu}World Champion!!\n")
+                delay.print_delay(f"\n{style.default}Press enter to return to the locker room")
                 input()
 
          
             os.system('clear')
 
-            delay.print_delay(f"Welcome to the locker room {character_creation.player.first_name}!\n")
+            delay.print_delay(f"{style.default}Welcome to the locker room {character_creation.player.first_name}!\n")
             delay.print_delay("\nHere you will be able to prepare for your upcoming match\n")
             time.sleep(0.75)
 
             delay.print_delay("\nWithin the locker room you can:\n")
             time.sleep(0.75)
 
-            delay.print_pause("\n[1] View your upcoming opponent")
-            delay.print_pause("[2] View your fighter details")
-            delay.print_pause("[3] Upgrade fighter stats")
-            delay.print_pause("[4] Go to Battle!")
-            delay.print_pause("[5] Back to main menu\n")
+            delay.print_pause(f"\n{style.inp}[1]{style.default} View your upcoming opponent")
+            delay.print_pause(f"{style.inp}[2] {style.default}View your fighter details")
+            delay.print_pause(f"{style.inp}[3] {style.default}Upgrade fighter stats")
+            delay.print_pause(f"{style.inp}[4] {style.default}Go to Battle!")
+            delay.print_pause(f"{style.inp}[5] {style.default}Back to main menu\n")
 
             delay.print_delay("\nPlease input a number out of the above options to continue: ")
             user_input = int(input())
@@ -60,7 +60,7 @@ def battle_screen():
                 os.system('clear')
                 break
             else:
-                print("That is an invalid selection. Please enter a number between 1 and 3")
+                print(f"{style.err}That is an invalid selection. Please enter a number between 1 and 3")
     
     
     
