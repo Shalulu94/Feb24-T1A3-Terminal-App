@@ -4,6 +4,7 @@ import character_creation
 import os
 import time
 import delay
+import style
 
 
 def upgrades():
@@ -12,24 +13,25 @@ def upgrades():
         while character_creation.player.statpoints > 0:
             os.system('clear')
 
-            delay.print_delay("Welcome to the upgrade menu\n")
+            delay.print_delay(f"{style.default}Welcome to the upgrade menu\n")
             delay.print_delay("\nHere you will be able to spend available stat points to upgrade your fighter's stats\n")
-            delay.print_delay(f"You currently have {character_creation.player.statpoints} available stat points to use\n")
+            delay.print_delay(f"You currently have {style.bold}{character_creation.player.statpoints}{style.default} available stat points to use\n")
             delay.print_delay("\nPlease select from the following options:")
-            delay.print_pause("\n[1] Allocate stat points")
-            delay.print_pause("[2] View your fighter details")
-            delay.print_pause("[3] Return to previous menu")
+            delay.print_pause(f"\n{style.inp}[1]{style.default} Allocate stat points")
+            delay.print_pause(f"{style.inp}[2]{style.default} View your fighter details")
+            delay.print_pause(f"{style.inp}[3]{style.default} Return to previous menu\n")
 
-            user_input = int(input("\nPlease input your selection between 1 and 3:\n"))
+            delay.print_delay("\nPlease input your selection between 1 and 3:\n")
+            user_input = int(input())
 
             if user_input == 1:
                 
                 os.system('clear')
 
-                delay.print_delay("Please choose which stat you would like to upgrade:\n")
-                delay.print_pause("\n[Attack] - Each additional point increases Attack by 25")
-                delay.print_pause("[Defence] - Each additional point increases Defence by 25")
-                delay.print_pause("[HP] - Each additional point increases HP by 150\n")
+                delay.print_delay(f"{style.default}Please choose which stat you would like to upgrade:\n")
+                delay.print_pause(f"\n{style.inp}[Attack]{style.default} - Each additional point increases Attack by 25")
+                delay.print_pause(f"{style.inp}[Defence]{style.default} - Each additional point increases Defence by 25")
+                delay.print_pause(f"{style.inp}[HP]{style.default} - Each additional point increases HP by 150\n")
 
                 delay.print_delay("\nPlease type in which stat you would like to upgrade: ")
                 upgrade_input = input()
@@ -57,11 +59,11 @@ def upgrades():
                     input()
 
                 else:
-                    print("That is an invalid selection. Please type in your selection from the above fighter stats")
+                    print(f"{style.err}That is an invalid selection. Please type in your selection from the above fighter stats")
 
                     user_input = 1
 
-                    input("Press Enter to try again")
+                    input(f"Press Enter to try again{style.default}")
                     
             elif user_input == 2:
                 character_creation.character_details()
@@ -70,9 +72,9 @@ def upgrades():
                 break
 
             else:
-                print("That's an invalid selection.")
+                print(f"{style.err}That's an invalid selection.")
 
-                input("Press Enter to try again")
+                input(f"Press Enter to try again{style.default}")
 
         if character_creation.player.statpoints == 0:
             os.system('clear')
@@ -85,10 +87,10 @@ def upgrades():
             input()
             
     except ValueError:
-        print("\nThat was an invalid selection")
+        print(f"{style.err}\nThat was an invalid selection")
         print("Please enter a number between 1 and 3")
 
-        input("\nPress Enter to try again")
+        input(f"\nPress Enter to try again{style.default}")
 
         upgrades()
 

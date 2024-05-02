@@ -13,4 +13,4 @@ def print_delay(message):
     for letter in message:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.01)
+        time.sleep(0.015)

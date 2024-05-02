@@ -38,7 +38,7 @@ def main_menu():
     while user_input != 4:
         try:
             
-            delay.print_delay("\nPlease input a number out of the below options to continue:\n")
+            delay.print_delay(f"{style.default}\nPlease input a number out of the below options to continue:\n")
             time.sleep(0.75)
             delay.print_pause(f"\n{style.inp}[1]{style.default} Create a new fighter")
             delay.print_pause(f"{style.inp}[2]{style.default} Enter the Tournament")

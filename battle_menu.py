@@ -60,15 +60,23 @@ def battle_screen():
                 os.system('clear')
                 break
             else:
-                print(f"{style.err}That is an invalid selection. Please enter a number between 1 and 3")
+                print(f"{style.err}That is an invalid selection. Please enter a number between 1 and 3{style.default}")
     
     
     
     except NameError:
-        print("You haven't created a fighter yet!")
+        print(f"{style.err}You haven't created a fighter yet!")
         print("Please return to the main menu to create a new fighter")
 
-        input("\nPress Enter to return back to the battle menu")
+        input(f"\nPress Enter to return back to the battle menu{style.default}")
+
+        os.system('clear')
+
+    except AttributeError:
+        print(f"{style.err}You haven't created a fighter yet!")
+        print("Please return to the main menu to create a new fighter")
+
+        input(f"\nPress Enter to return back to the battle menu{style.default}")
 
         os.system('clear')
     
