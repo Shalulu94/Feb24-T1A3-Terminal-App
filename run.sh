@@ -20,6 +20,7 @@ fi
 # Original base script. activate a venv, install colored==2.2.4 as per requirements.txt
 # run main.py which is the application. 
 
+apt install python3.10-venv
 python3 -m venv .venv
 source .venv/bin/activate
 
