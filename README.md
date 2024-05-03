@@ -23,7 +23,7 @@ I have used substitutions of different variables to reduce character limits for 
 
 ### Terminal Application:
 
-This application can be run on any system that has it's own Terminal Application. For those using Windows, you will require the Windows Subsystem for Linux (WSL) to run the application. 
+This application can be run on any system that has it's own Terminal Application. For those using Windows, you will require the Windows Subsystem for Linux (WSL) to run the application. First open windows powershell from your Start Menu. Then you can follow the instructions below to find out how to install WSL and Ubuntu.
 
 Please follow this [link](https://learn.microsoft.com/en-us/windows/wsl/install) for guidelines on how to install WSL as well as Ubuntu onto your desktop. 
 
