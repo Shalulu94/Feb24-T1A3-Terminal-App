@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 
 if ! [[ -x "$(command -v python3)" ]]
 then
@@ -15,5 +15,5 @@ pip3 install -r requirements.txt
 
 python3 main.py
 
-$(command -v python3 install colored)
+
 
