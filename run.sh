@@ -11,8 +11,8 @@ then
   exit 1
 fi
 
-python3 -m pip install --upgrade pip
-python3 -m pip --version
+# python3 -m pip install --upgrade pip
+# python3 -m pip --version
 
 
 
@@ -20,7 +20,8 @@ python3 -m pip --version
 # Original base script. activate a venv, install colored==2.2.4 as per requirements.txt
 # run main.py which is the application. 
 
-
+python3 -m venv .venv
+source .venv/bin/activate
 
 if [[ -x "$(command -v python install -r requirements.txt)" ]]
 then
@@ -46,7 +47,6 @@ then
   exit 1
 fi
 
-python3 -m venv .venv
-source .venv/bin/activate
+
 python3 main.py
 
