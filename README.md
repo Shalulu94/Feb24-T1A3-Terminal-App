@@ -75,19 +75,21 @@ I have also attempted creating a 'CPU' component to allow for interactivity and 
 
 Below I discuss some of the key features within this application.
 
-### Character and Opponent Creation:
+### Character Creation and Player attributes:
 
-My game allows for users to create their own 'fighter' and their choices determine the starting attributes for their fighter. Here I wanted to create a sense of impact to a players decision making so depending on the fighting style that a player chooses, their overall base stats would be different, slightly in favour of their desired choice. 
+My game allows for users to create their own 'fighter' and their choices determine the starting attributes for their fighter. In order to create some impact on the player's decision, I have allocated different base stats to a players fighter depending on their chosen 'fighting style'. This adds a bit of weight behind their decision and adds some replayability to my game as player's can challenge themselves by replaying the game using a different fighting style. 
 
-Here I use a Class function to automatically store player's inputs and within the class itself I have IF statements to determine their starting stats based on their choice of fighter style. While the player only inputs 4 arguments within the Class (first name, last name, nickname and fight style) there are over 10 different attributes saved within the class which are applied to the player's fighter. Some of these attributes are applied variables to make it easier to call upon when writing code within other modules.
+To create this feature I have used a Class to automatically store player's inputs and within the class itself I have IF statements to determine their starting stats based on their choice of fighter style. While the player only inputs 4 arguments when calling the Class (first name, last name, nickname and fight style) there are over 10 different attributes saved within the class which are applied to the player's fighter.
 
-One example would be another separate function for 'character details' which can be called upon within several menu's of the game. This will provide a quick snapshot a player's fighter details whenever required. It utilises the variables defined in the Class function to display information quickly.
+A second function was also created to allow users to check their fighter's stats from any menu. As fighter stats change throughout the game, I needed to ensure the function was always calling the latest player attributes.
 
-A second class has also been created for CPU fighter creation. This is a much simpler version of the player creation class as it does not require any inputs from user, but instead has self_defined attributes and allowed me to create multiple opponents via directly entering their attributes within the class arguments. After creating the class I was able to create a new CPU opponent with a single line of code. 
+A second class has also been created for CPU fighter creation. This is a much simpler version of the player creation class as it does not require any inputs from user, but instead has self_defined attributes and allowed me to create multiple opponents almost instantly. After creating the class I was able to create a new CPU opponent with a single line of code. This is evident in my opponents.py module
 
-Given we're taking a specific input from the player and applying IF statements to their argument, I've also needed to ensure error capturing is included in the Class for smooth operation. 
+Below is flowchart for the logic flow for character creation and screenshots of the character creation menu, character details menu as well as opponents menu.
 
 **Insert Flow chart for character creation**
+
+**Insert game screenshots**
 
 
 
