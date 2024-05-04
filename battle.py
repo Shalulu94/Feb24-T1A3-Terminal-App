@@ -183,7 +183,7 @@ def battle_sim():
             f"\nYour opponent's HP is: {style.hp}{opponent_hp}{style.default}\n"
         )
 
-        if opponent_hp < 0:
+        if opponent_hp <= 0:
             delay.print_delay(
                 f"You've successfully knocked out {opponent_first_name}!\n"
             )
@@ -381,7 +381,7 @@ def battle_sim():
             f"\nYour opponent's HP is: {style.hp}{opponent_hp}{style.default}\n"
         )
 
-        if player_hp < 0:
+        if player_hp <= 0:
             delay.print_delay(
                 f"Oh no!! You've been knocked out by {opponent_first_name}!\n"
             )
