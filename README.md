@@ -160,3 +160,5 @@ Second I used Trello boards to help with my project management and outline all o
 ![Trello board 2](./docs/trello1.png)
 
 ![Trello board 3](./docs/trello3.png)
+
+![Flowchart for whole game](./docs/flow5.jpg)
