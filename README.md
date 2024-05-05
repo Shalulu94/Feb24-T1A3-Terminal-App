@@ -8,6 +8,7 @@ Upon winning all three matches, the player will be crowned World Boxing Champion
 
 ## Source Code
 - [Github Repository](https://github.com/Shalulu94/Feb24-T1A3-Terminal-App)
+- [Trello Board](https://trello.com/b/QzIGTdch/fight-night)
 
 ## Code Style Guide
 
@@ -73,7 +74,7 @@ This application has multiple key features as part of it's gameplay loop. My goa
 
 I have also attempted creating a 'CPU' component to allow for interactivity and randomness in the overall gameplay loop. The CPU has the ability to perform actions in direct response to a player's actions and depending on the output, different scenario's will play out. Developing this CPU was the most challenging as you must code every possible outcome to ensure that the CPU has an appropriate response to every possible input from the player. This ends up requiring multiple nested if statements within if statements and loops. Error handling and testing is also important as there are an exponentially larger amount of potential crash scenarios.
 
-Below I discuss some of the key features within this application.
+Below I discuss some of the key features within this application. 
 
 ### Character Creation and Player attributes:
 
@@ -86,7 +87,7 @@ A second function was also created to allow users to check their fighter's stats
 Below is flowchart for the logic flow for character creation and screenshots of the character creation menu, character details menu as well as op
 ponents menu.
 
-**Insert Flow chart for character creation**
+![Flowchart for main menu](./docs/flow4.jpg)
 
 
 ![Character creation menu](./docs/character_creation.png)
@@ -119,6 +120,8 @@ cpu_att_action and cpu_defence_action variables both include a list of possible 
 
 Below is flowchart for the logic of the battle simulator as well as some screenshots of the application in action.
 
+![Flowchart for main menu](./docs/flow3.jpg)
+
 ![battle simulator 4](./docs/battle_sim4.png)
 
 ![battle simulator 3](./docs/battle_sim3.png)
@@ -132,7 +135,22 @@ I utilise nested if statements within the while loop to take the player's input 
 
 Flowchart for logic and screenshots below
 
+![Flowchart for main menu](./docs/flow1.jpg)
+
 ![upgrade menu](./docs/upgrades.png)
 
 ![upgrade menu 2](./docs/upgrades2.png)
 
+## Implementation Plan
+
+To implement my project, I first started with the design stage which was primarily the flowchart. This allowed me to visualise the flow of my program and all of the different features and functions that I would need to create to have a fully funtional battle simulator. It was surprising how big the project was once I put it into a flowchart! Below are the flowcharts for each of the key menu's/features of my application and they all interlink with each other. Technically, they are all loops within loops with the Main menu being the first and primary loop. 
+
+**Insert flowchart**
+
+Second I used Trello boards to help with my project management and outline all of my tasks and my progress within each task using checklists. I split these tasks into four progress categories across my board (To Do, In Progress, Error Testing and Complete). As i required significant error capturing for all the possible player inputs, having each function/feature enter an error testing phase was extremely important and I spent lots of time trying my hardest to break each function and then write suitable code to handle the error gracefully. 
+
+![Trello board](./docs/trello2.png)
+
+![Trello board 2](./docs/trello1.png)
+
+![Trello board 3](./docs/trello3.png)
