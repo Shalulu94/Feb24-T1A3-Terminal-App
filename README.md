@@ -56,7 +56,13 @@ You can access the repository directly [here](https://github.com/Shalulu94/Feb24
 
     git clone https://github.com/Shalulu94/Feb24-T1A3-Terminal-App.git
 
-This will download all of the necessary files onto your device. After that you simply need to paste in the below code to run the script:
+This will download all of the necessary files onto your device. 
+
+You can then navigate to the folder with source code by typing in
+
+    cd Feb24-T1A3-Terminal-App/
+
+After that you simply need to paste in the below code to run the script:
 
     ./run.sh
 
