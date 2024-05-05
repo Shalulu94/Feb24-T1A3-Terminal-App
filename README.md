@@ -83,23 +83,56 @@ To create this feature I have used a Class to automatically store player's input
 
 A second function was also created to allow users to check their fighter's stats from any menu. As fighter stats change throughout the game, I needed to ensure the function was always calling the latest player attributes.
 
-A second class has also been created for CPU fighter creation. This is a much simpler version of the player creation class as it does not require any inputs from user, but instead has self_defined attributes and allowed me to create multiple opponents almost instantly. After creating the class I was able to create a new CPU opponent with a single line of code. This is evident in my opponents.py module
-
-Below is flowchart for the logic flow for character creation and screenshots of the character creation menu, character details menu as well as opponents menu.
+Below is flowchart for the logic flow for character creation and screenshots of the character creation menu, character details menu as well as op
+ponents menu.
 
 **Insert Flow chart for character creation**
 
-**Insert game screenshots**
 
+![Character creation menu](./docs/character_creation.png)
+
+![View charcter details](./docs/character_details.png)
+
+### CPU Opponents and logic
+
+A second class has also been created for CPU fighter creation. This is a much simpler version of the player creation class as it does not require any inputs from user, but instead has self_defined attributes and allowed me to create multiple opponents almost instantly. After creating the class I was able to create a new CPU opponent with a single line of code. This is evident in my opponents.py module and at the beginning of each module that requires CPU opponents, multiple variables and If statements are required to set up the actions accordingly
+
+The CPU's are required to have outputs that will directly affect the gameplay loop. As such to add 'logic' to a CPU's actions, I needed to ensure variables were set and utilised the Random package in python to then allow random choices to be selected out of a list of possible actions which will ultimately decide the CPU's action. 
+
+Have provided some screenshots of the code built in to add logic, choice and randomness to CPU actions each turn:
+
+![cpu screenshot for code](./docs/cpu.png)
+
+![cpu screenshot for code 2](./docs/cpu2.png)
+
+![cpu screenshot for code 3](./docs/cpu3.png)
+
+
+
+### Battle Simulation
+
+The Battle simulation is the main feature of this application. Player's will enter a turn based battle loop and take turns between attacking and defending. First fighter to reach 0 hp loses the battle. 
+
+This feature utilises a while loop to begin the battle. A number of variables are defined at the start of the loop to lock in the player and opponents curent attack, defence, hp and subsequently some formulas to determine their respective full_attack_damage or block_attack_damage. As this is a turn based battle sim where both player and CPU are required to have action inputs, I've also added additional variables to randomise CPU choices for each round.  
+
+cpu_att_action and cpu_defence_action variables both include a list of possible actions a CPU can make within each turn. Utilising the Random package and applying cpu_defence = random.choice(cpu_def_action) allows the CPU to perform a random action within each turn and ensure no recognisable pattern for cpu actions. 
+
+Below is flowchart for the logic of the battle simulator as well as some screenshots of the application in action.
+
+![battle simulator 4](./docs/battle_sim4.png)
+
+![battle simulator 3](./docs/battle_sim3.png)
 
 
 ### Character Upgrades:
 
+After each successful victory, the player will be awarded with 3 stat points that they can use to upgrade their fighter's stats. The upgrade_stats module utilises a while loop which activates when a player has available skill points to use. User's will then get their choice to upgrade their stats or view their current stats which just calls upon the function previous created during the character creation menu. Reusing these functions across multiple modules ensures my code is adhering to D.R.Y pricinciples.
 
+I utilise nested if statements within the while loop to take the player's input and update their stats according to their desired choice. This means updating the assigned variables within the character class. As only a single player utilises this class, there was no need to make the attributes private and use getters or setters. Instead I assigned the attributes to a new variable and manipulate that variable whenever an update is required. 
 
-## Battle Simulation
+Flowchart for logic and screenshots below
 
+![upgrade menu](./docs/upgrades.png)
 
-
-
+![upgrade menu 2](./docs/upgrades2.png)
 

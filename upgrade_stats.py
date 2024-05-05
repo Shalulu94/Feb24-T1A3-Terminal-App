@@ -40,7 +40,7 @@ def upgrades():
                     f"{style.default}Please choose which stat you would like to upgrade:\n"
                 )
                 delay.print_pause(
-                    f"\n{style.inp}[Attack]{style.default} - Each additional point increases {style.hit}Attack{style.default} by 25"
+                    f"\n{style.inp}[Attack]{style.default} - Each additional point increases {style.att}Attack{style.default} by 25"
                 )
                 delay.print_pause(
                     f"{style.inp}[Defence]{style.default} - Each additional point increases {style.dfnd}Defence{style.default} by 25"
